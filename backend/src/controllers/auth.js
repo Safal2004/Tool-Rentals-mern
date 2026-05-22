@@ -15,7 +15,7 @@ export const registerUser = controllerWrapper(async (req, res) => {
     throw new ValidationError("Account already exists for this email.");
   }
 
-  const [err, newUser] = await createNewUser(name, email, password);
+  const [err, newUser] = await crateeNewUser(name, email, password);
   if (err) {
     return res.status(400).json({ message: err });
   }
